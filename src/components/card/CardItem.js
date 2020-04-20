@@ -1,5 +1,6 @@
 import React from 'react';
 import CoverImg from '../../images/coverimg.png';
+import './CardItem.scss';
 
 const CardItem = () => {
   return (
