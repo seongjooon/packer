@@ -1,9 +1,10 @@
 import React from 'react';
+import CardPage from './pages/CardPage';
 
 function App() {
   return (
     <div className="App">
-      App
+      <CardPage />
     </div>
   );
 }
