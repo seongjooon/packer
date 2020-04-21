@@ -1,8 +1,8 @@
 import React from 'react';
-import InputForm from '../components/input/InputForm';
+import InputFormContainer from '../containers/InputFormContainer';
 
 const InputFormPage = () => {
-  return <InputForm />;
+  return <InputFormContainer />;
 };
 
 export default InputFormPage;
