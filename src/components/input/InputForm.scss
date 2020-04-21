@@ -21,6 +21,26 @@
       font-size: 12px;
       resize: none;
       text-indent: 0;
+      &::placeholder {
+        font-weight: bold;
+        color: #dc5850;
+      }
+      &:focus {
+        outline: 1.5px solid #22a7af;
+        border: 1px solid #ffffff;
+      }
+    }
+    .disabled {
+      pointer-events: none;
+      background-color: rgba(0, 0, 0, 0.041);
+      &::placeholder {
+        color: #dc57509a;
+      }
+    }
+    .readonly {
+      pointer-events: none;
+      background-color: rgba(0, 0, 0, 0.041);
+      color: rgb(82, 82, 82);
     }
     .ui_textarea__chars {
       position: absolute;
