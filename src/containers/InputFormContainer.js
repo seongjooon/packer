@@ -3,10 +3,12 @@ import InputForm from '../components/input/InputForm';
 import { getByteSize } from '../utils';
 
 const InputFormContainer = () => {
+  const [defaultComment, setDefaultComment] = useState('');
   const [comment, setComment] = useState('');
   const [totalByte, setTotalByte] = useState(500);
 
   useEffect(() => {
+    setDefaultComment('안녕하세요.');
     setComment('안녕하세요.');
     const byte = getByteSize('안녕하세요.');
     setTotalByte(500 - byte);
@@ -32,12 +34,13 @@ const InputFormContainer = () => {
   return (
     <div>
       <InputForm
+        defaultComment={defaultComment}
         comment={comment}
         onChange={handleChangeComment}
         totalByte={totalByte}
       />
-      {/* <InputForm type="disabled" />
-      <InputForm type="readonly" comment="추가적인 요청사항 없이 배송됩니다" /> */}
+      <InputForm type="disabled" />
+      <InputForm type="readonly" comment="추가적인 요청사항 없이 배송됩니다" />
     </div>
   );
 };

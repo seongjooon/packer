@@ -1,12 +1,14 @@
 import React from 'react';
 import './InputForm.scss';
 
-const InputForm = ({ type, comment, onChange, totalByte }) => {
+const InputForm = ({ type, defaultComment, comment, onChange, totalByte }) => {
   return (
     <div className="ui_input_form">
       <div
         className={`ui_input_form__textarea ${
-          type !== 'readonly' ? comment && 'active-textarea' : ''
+          defaultComment !== comment && type !== 'readonly'
+            ? comment && 'active-textarea'
+            : ''
         }`}
       >
         <textarea
@@ -23,7 +25,9 @@ const InputForm = ({ type, comment, onChange, totalByte }) => {
       <button
         type="submit"
         className={`ui_textarea__btn ${
-          type !== 'readonly' ? comment && 'active-btn' : ''
+          defaultComment !== comment && type !== 'readonly'
+            ? comment && 'active-btn'
+            : ''
         }`}
       >
         저장
