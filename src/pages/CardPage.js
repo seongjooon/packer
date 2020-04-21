@@ -1,12 +1,10 @@
 import React from 'react';
-import CardItem from '../components/card/CardItem';
+import CardTemplate from '../components/card/CardTemplate';
 
 const CardPage = () => {
   return (
     <div className="Card_Page">
-      <CardItem additions="comment" />
-      <CardItem additions="rating" />
-      <CardItem />
+      <CardTemplate />
     </div>
   );
 };
