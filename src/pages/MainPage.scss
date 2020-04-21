@@ -1,0 +1,16 @@
+.Main-Page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 844px;
+  a {
+    margin: 0 80px;
+    padding: 80px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #ffff;
+    background-color: gray;
+    border-radius: 12px;
+  }
+}
