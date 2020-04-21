@@ -1,3 +1,5 @@
+@import '../../styles/utils.scss';
+
 .ui_input_form {
   position: relative;
   margin-top: 20px;
@@ -14,41 +16,41 @@
       width: 100%;
       height: 100%;
       box-sizing: border-box;
-      border: 1px solid #b4b4b4;
+      border: 1px solid $gray8;
       border-radius: 2px;
       line-height: 1.5;
-      box-shadow: 0 1px 3px 0 hsla(0, 0%, 86.3%, 0.3);
+      box-shadow: 0 1px 3px 0 $gray2;
       font-size: 12px;
       resize: none;
       text-indent: 0;
       &::placeholder {
         font-weight: bold;
-        color: #dc5850;
+        color: $idusRedYello;
       }
       &:focus {
         outline: none;
-        border: 1px solid #22a7af;
+        border: 1px solid $idusGreenBlue;
         border-radius: 2px;
       }
     }
     .disabled {
       pointer-events: none;
-      background-color: rgba(0, 0, 0, 0.041);
+      background-color: $transparentGray;
       &::placeholder {
-        color: #dc57509a;
+        color: $transparentRed;
       }
     }
     .readonly {
       pointer-events: none;
-      background-color: rgba(0, 0, 0, 0.041);
-      color: rgb(82, 82, 82);
+      background-color: $transparentGray;
+      color: $gray9;
     }
     .ui_textarea__chars {
       position: absolute;
       bottom: 10px;
       right: 20px;
       font-size: 12px;
-      color: #999;
+      color: $gray3;
       font-style: normal;
     }
   }
@@ -63,16 +65,16 @@
     width: 72px;
     height: 80px;
     line-height: 78px;
-    color: #22a7af;
+    color: $idusGreenBlue;
     font-size: 12px;
     font-weight: 400;
     background-color: transparent;
-    box-shadow: 0 1px 3px 0 hsla(0, 0%, 86.3%, 0.3);
+    box-shadow: 0 1px 3px 0 $gray2;
     box-sizing: border-box;
     border-radius: 2px;
     cursor: pointer;
     &:hover {
-      background-color: #eeeeee;
+      background-color: $gray10;
     }
   }
   .active-btn {
