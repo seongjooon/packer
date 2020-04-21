@@ -13,8 +13,8 @@ const InputFormContainer = () => {
   return (
     <div>
       <InputForm comment={comment} onChange={handleChangeComment} />
-      <InputForm type="disabled" />
-      <InputForm type="readonly" comment="추가적인 요청사항 없이 배송됩니다" />
+      {/* <InputForm type="disabled" />
+      <InputForm type="readonly" comment="추가적인 요청사항 없이 배송됩니다" /> */}
     </div>
   );
 };

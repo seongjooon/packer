@@ -4,7 +4,7 @@ import './InputForm.scss';
 const InputForm = ({ type, comment, onChange }) => {
   return (
     <div className="ui_input_form">
-      <div className="ui_input_form__textarea">
+      <div className={`ui_input_form__textarea ${comment && 'active-textarea'}`}>
         <textarea
           className={`ui__textarea ${type}`}
           name="content_text"

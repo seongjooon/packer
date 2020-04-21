@@ -8,7 +8,6 @@
     left: 0;
     right: 0;
     height: 80px;
-    transition: width, 0.3s, ease;
     .ui__textarea {
       padding: 4px 12px;
       width: 100%;
@@ -26,8 +25,9 @@
         color: #dc5850;
       }
       &:focus {
-        outline: 1.5px solid #22a7af;
-        border: 1px solid #ffffff;
+        outline: none;
+        border: 1px solid #22a7af;
+        border-radius: 2px;
       }
     }
     .disabled {
@@ -51,14 +51,28 @@
       font-style: normal;
     }
   }
+  .active-textarea {
+    width: 88%;
+  }
   .ui_textarea__btn {
     position: absolute;
     right: 0;
     margin-right: -72px;
+    padding: 0 16px;
     width: 72px;
     height: 80px;
     line-height: 78px;
     color: #22a7af;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: transparent;
+    box-shadow: 0 1px 3px 0 hsla(0, 0%, 86.3%, 0.3);
+    box-sizing: border-box;
+    border-radius: 2px;
+    cursor: pointer;
+    &:hover {
+      background-color: #eeeeee;
+    }
   }
   .active-btn {
     margin-right: 0;
