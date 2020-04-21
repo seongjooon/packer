@@ -3,15 +3,7 @@
 .ui_card--side {
   position: relative;
   display: table;
-  vertical-align: top;
-  margin-left: 16px;
-  margin-top: 16px;
-  overflow: hidden;
-  border-radius: 4px;
-  border: 1px solid $gray1;
-  font-size: 12px;
-  background: $gray7;
-  box-shadow: 0 1px 3px 0 $gray2;
+  @include cardForm;
   * {
     display: table-cell;
     vertical-align: top;
@@ -32,19 +24,20 @@
       .ui_card__title {
         display: block;
         display: -webkit-box;
+        margin: 15px 0;
         height: 21px;
-        font-size: 14px;
+        font: {
+          size: 14px;
+          weight: 700;
+        }
         line-height: 1.5;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-        margin: 15px 0;
-        font-weight: 700;
       }
       .ui_card__comment {
-        color: #666;
-        display: block;
+        color: $gray6;
         display: -webkit-box;
         height: 74px;
         line-height: 1.5;

@@ -13,3 +13,21 @@ $gold: #ffc801;
 $transparentGray: rgba(0, 0, 0, 0.041);
 $transparentRed: #dc57509a;
 $idusGreenBlue: #22a7af;
+
+@mixin cardForm {
+  vertical-align: top;
+  margin: {
+    top: 16px;
+    left: 16px;
+  }
+  border: {
+    width: 1px;
+    style: solid;
+    color: $gray1;
+    radius: 4px;
+  }
+  overflow: hidden;
+  font-size: 12px;
+  box-shadow: 0 1px 3px 0 $gray2;
+  background: $gray7;
+}

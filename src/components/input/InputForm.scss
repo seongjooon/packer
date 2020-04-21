@@ -15,11 +15,15 @@
       padding: 4px 12px;
       width: 100%;
       height: 100%;
+      border: {
+        width: 1px;
+        style: solid;
+        color: $gray8;
+        radius: 2px;
+      }
       box-sizing: border-box;
-      border: 1px solid $gray8;
-      border-radius: 2px;
-      line-height: 1.5;
       box-shadow: 0 1px 3px 0 $gray2;
+      line-height: 1.5;
       font-size: 12px;
       resize: none;
       text-indent: 0;
@@ -29,33 +33,39 @@
       }
       &:focus {
         outline: none;
-        border: 1px solid $idusGreenBlue;
-        border-radius: 2px;
+        border: {
+          width: 1px;
+          style: solid;
+          color: $idusGreenBlue;
+          radius: 2px;
+        }
       }
-    }
-    .disabled {
-      pointer-events: none;
-      background-color: $transparentGray;
-      &::placeholder {
-        color: $transparentRed;
+      &.disabled {
+        pointer-events: none;
+        background-color: $transparentGray;
+        &::placeholder {
+          color: $transparentRed;
+        }
       }
-    }
-    .readonly {
-      pointer-events: none;
-      background-color: $transparentGray;
-      color: $gray9;
+      &.readonly {
+        pointer-events: none;
+        background-color: $transparentGray;
+        color: $gray9;
+      }
     }
     .ui_textarea__chars {
       position: absolute;
       bottom: 10px;
       right: 20px;
-      font-size: 12px;
       color: $gray3;
-      font-style: normal;
+      font: {
+        size: 12px;
+        style: normal;
+      }
     }
-  }
-  .active-textarea {
-    width: 88%;
+    &.active-textarea {
+      width: 88%;
+    }
   }
   .ui_textarea__btn {
     position: absolute;
@@ -66,8 +76,10 @@
     height: 80px;
     line-height: 78px;
     color: $idusGreenBlue;
-    font-size: 12px;
-    font-weight: 400;
+    font: {
+      size: 12px;
+      weight: 400;
+    }
     background-color: transparent;
     box-shadow: 0 1px 3px 0 $gray2;
     box-sizing: border-box;
@@ -76,8 +88,8 @@
     &:hover {
       background-color: $gray10;
     }
-  }
-  .active-btn {
-    margin-right: 0;
+    &.active-btn {
+      margin-right: 0;
+    }
   }
 }
