@@ -1,8 +1,10 @@
 import React from 'react';
 import CoverImg from '../../images/coverimg.png';
 import './CardItem.scss';
+import Rating from 'react-rating';
+import { TiStarOutline, TiStarFullOutline } from 'react-icons/ti';
 
-const CardItem = () => {
+const CardItem = ({ additions }) => {
   return (
     <div className="ui_card">
       <div className="ui_card__imgcover">
@@ -16,6 +18,18 @@ const CardItem = () => {
           <span className="ui_card__cross-out">Cross out</span>
         </div>
       </div>
+      {additions && (
+        <div className="ui_card__rating">
+          <div className="ui_rating_wrapper">
+            <Rating
+              className="ui_rating"
+              initialRating={0}
+              emptySymbol={<TiStarOutline size="15px" />}
+              fullSymbol={<TiStarFullOutline size="15px" />}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
