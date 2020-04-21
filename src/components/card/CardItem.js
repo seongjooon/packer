@@ -27,6 +27,11 @@ const CardItem = ({ additions }) => {
               emptySymbol={<TiStarOutline size="15px" />}
               fullSymbol={<TiStarFullOutline size="15px" />}
             />
+            {additions === 'comment' && (
+              <span className="ui_card__comment">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit
+              </span>
+            )}
           </div>
         </div>
       )}
