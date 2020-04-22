@@ -2,4 +2,7 @@
 
 .InputForm-Template {
   @include templateLayout;
+  .InputForm_wrapper {
+    flex-direction: column;
+  }
 }
