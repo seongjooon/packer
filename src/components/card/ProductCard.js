@@ -3,7 +3,7 @@ import './ProductCard.scss';
 import Rating from 'react-rating';
 import { TiStarOutline, TiStarFullOutline } from 'react-icons/ti';
 
-const ProductCard = ({ created_by, title, coverImage, rating, comment }) => {
+const ProductCard = ({ title, created_by, coverImage, rating, comment }) => {
   return (
     <div className="ui_card">
       <div className="ui_card__imgcover">

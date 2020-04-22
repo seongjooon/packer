@@ -3,7 +3,7 @@ import './ReviewCard.scss';
 import Rating from 'react-rating';
 import { TiStarOutline, TiStarFullOutline } from 'react-icons/ti';
 
-const ReviewCard = ({ reviewer, title, coverImage, rating, comment }) => {
+const ReviewCard = ({ title, created_by, coverImage, rating, comment }) => {
   return (
     <div className="ui_card--side">
       <div className="ui_card__imgcover">
@@ -24,7 +24,7 @@ const ReviewCard = ({ reviewer, title, coverImage, rating, comment }) => {
                 emptySymbol={<TiStarOutline size="20px" />}
                 fullSymbol={<TiStarFullOutline size="20px" />}
               />
-              <span className="ui_card__reviewer"> | {reviewer}</span>
+              <span className="ui_card__reviewer"> | {created_by}</span>
             </div>
           </div>
         )}

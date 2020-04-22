@@ -1,12 +1,11 @@
 .Main-Page {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  height: 844px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   a {
-    margin: 0 80px;
-    padding: 80px;
+    margin: 0 60px;
+    padding: 120px;
     font-size: 2rem;
     text-decoration: none;
     color: white;
