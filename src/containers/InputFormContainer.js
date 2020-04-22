@@ -1,48 +1,61 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { connect } from 'react-redux';
+import { requestAction } from '../actions';
+import { getDataAPI } from '../api';
 import InputForm from '../components/input/InputForm';
 import { getByteSize } from '../utils';
 
-const InputFormContainer = () => {
-  const [defaultComment, setDefaultComment] = useState('');
-  const [comment, setComment] = useState('');
-  const [totalByte, setTotalByte] = useState(500);
+const InputFormContainer = ({ getRequestData, requestItems }) => {
+  const [text, setText] = useState('');
+  const [totalByte, setTotalByte] = useState(0);
+
+  const getData = useCallback(async () => {
+    const requestItems = await getDataAPI('requestItems');
+    getRequestData(requestItems);
+  }, [getRequestData]);
 
   useEffect(() => {
-    setDefaultComment('안녕하세요.');
-    setComment('안녕하세요.');
-    const byte = getByteSize('안녕하세요.');
-    setTotalByte(500 - byte);
-  }, []);
+    getData();
+  }, [getData]);
 
   const handleChangeComment = (e) => {
     const { value, name } = e.target;
     if (name === 'content_text') {
       const byte = getByteSize(value);
       if (byte <= 500) {
-        setComment(value);
+        setText(value);
         setTotalByte(500 - byte);
       } else {
-        setComment(value.substr(0, 499));
+        setText(value.substr(0, 499));
         setTotalByte(0);
-      }
-      if (value === '') {
-        setTotalByte(500);
       }
     }
   };
 
   return (
-    <div>
-      <InputForm
-        defaultComment={defaultComment}
-        comment={comment}
-        onChange={handleChangeComment}
-        totalByte={totalByte}
-      />
-      <InputForm type="disabled" />
-      <InputForm type="readonly" comment="추가적인 요청사항 없이 배송됩니다" />
-    </div>
+    <>
+      {requestItems.length !== 0 &&
+        requestItems.map((item, index) => {
+          const { type, comment } = item;
+          return (
+            <InputForm
+              key={index}
+              type={type}
+              defaultComment={comment}
+              text={text}
+              onChange={handleChangeComment}
+              totalByte={totalByte}
+            />
+          );
+        })}
+    </>
   );
 };
 
-export default InputFormContainer;
+const mapStateToProps = (state) => ({
+  requestItems: state.getDataReducer.requestItems
+});
+
+const mapDispatchToProps = { getRequestData: requestAction };
+
+export default connect(mapStateToProps, mapDispatchToProps)(InputFormContainer);

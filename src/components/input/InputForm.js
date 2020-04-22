@@ -1,13 +1,14 @@
 import React from 'react';
 import './InputForm.scss';
+import { getByteSize } from '../../utils';
 
-const InputForm = ({ type, defaultComment, comment, onChange, totalByte }) => {
+const InputForm = ({ type, defaultComment, text, onChange, totalByte }) => {
   return (
     <div className="ui_input_form">
       <div
         className={`ui_input_form__textarea ${
-          defaultComment !== comment && type !== 'readonly'
-            ? comment && 'active-textarea'
+          type === 'input' && defaultComment !== text
+            ? text && 'active-textarea'
             : ''
         }`}
       >
@@ -16,17 +17,23 @@ const InputForm = ({ type, defaultComment, comment, onChange, totalByte }) => {
           name="content_text"
           maxLength="500"
           placeholder="주문 요청사항을 입력해주세요"
-          value={comment}
+          value={type === 'input' ? text || defaultComment : defaultComment}
           onChange={onChange}
           readOnly={type === 'disabled' || type === 'readonly'}
-        ></textarea>
-        <em className="ui_textarea__chars">{totalByte || 500}</em>
+        />
+        <em className="ui_textarea__chars">
+          {type === 'input'
+            ? totalByte ||
+              (defaultComment && 500 - getByteSize(defaultComment)) ||
+              500
+            : 500}
+        </em>
       </div>
       <button
         type="submit"
         className={`ui_textarea__btn ${
-          defaultComment !== comment && type !== 'readonly'
-            ? comment && 'active-btn'
+          type === 'input' && defaultComment !== text
+            ? text && 'active-btn'
             : ''
         }`}
       >
