@@ -4,11 +4,9 @@ import CardTemplate from '../components/card/CardTemplate';
 
 const CardPage = () => {
   return (
-    <div className="Card_Page">
-      <CardTemplate>
-        <CardContainer />
-      </CardTemplate>
-    </div>
+    <CardTemplate>
+      <CardContainer />
+    </CardTemplate>
   );
 };
 

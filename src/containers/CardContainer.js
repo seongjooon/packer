@@ -5,11 +5,11 @@ import { getDataAPI } from '../api';
 import ProductCard from '../components/card/ProductCard';
 import ReviewCard from '../components/card/ReviewCard';
 
-const CardContainer = ({ cardAction, cardItems }) => {
+const CardContainer = ({ getCardData, cardItems }) => {
   const getData = useCallback(async () => {
     const cardItems = await getDataAPI('cardItems');
-    cardAction(cardItems);
-  }, [cardAction]);
+    getCardData(cardItems);
+  }, [getCardData]);
 
   useEffect(() => {
     getData();
@@ -54,6 +54,6 @@ const mapStateToProps = (state) => ({
   cardItems: state.getDataReducer.cardItems
 });
 
-const mapDispatchToProps = { cardAction };
+const mapDispatchToProps = { getCardData: cardAction };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);

@@ -9,4 +9,3 @@ export const requestAction = (requestItems) => ({
   type: GET_REQUEST_ITEMS,
   payload: requestItems
 });
-
