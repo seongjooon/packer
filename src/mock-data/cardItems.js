@@ -8,20 +8,20 @@ export default [
     image: CoverImg,
     rating: 3,
     comment:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elits graitudegupo',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elits graitudegupo'
   },
   {
     type: 'product',
     title: 'Card Title',
     created_by: 'Card Label',
     image: CoverImg,
-    rating: 3,
+    rating: 3
   },
   {
     type: 'product',
     title: 'Card Title',
     created_by: 'Card Label',
-    image: CoverImg,
+    image: CoverImg
   },
   {
     type: 'review',
@@ -31,6 +31,6 @@ export default [
     image: CoverImg,
     rating: 3,
     comment:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elits graitudegupo',
-  },
+      'Lorem ipsum dolor sit amet consectetur adipisicing elits graitudegupo'
+  }
 ];

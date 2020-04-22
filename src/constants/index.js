@@ -1,0 +1,2 @@
+export const GET_CARD_ITEMS = 'GET_CARD_ITEMS';
+export const GET_REQUEST_ITEMS = 'GET_REQUEST_ITEMS';
