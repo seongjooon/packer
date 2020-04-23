@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { GET_CARD_ITEMS, GET_REQUEST_ITEMS } from '../constants';
 
-const initialState = {
+export  const initialState = {
   cardItems: [],
   requestItems: []
 };
