@@ -1,11 +1,11 @@
 import React from 'react';
-import { Wave } from 'better-react-spinkit';
+import GridLoader from 'react-spinners/GridLoader';
 import './Loading.scss';
 
 const Loading = () => {
   return (
     <div className="Loading">
-      <Wave size={80} />
+      <GridLoader color="rgb(100, 100, 100)" />
     </div>
   );
 };

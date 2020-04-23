@@ -47,7 +47,7 @@ ProductCard.defaultProps = {
   title: 'untitle',
   created_by: 'unknown',
   cover_image: '',
-  rating: 0,
+  rating: null,
   comment: ''
 };
 
