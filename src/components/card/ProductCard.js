@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ProductCard.scss';
 import Rating from 'react-rating';
 import { TiStarOutline, TiStarFullOutline } from 'react-icons/ti';
@@ -33,6 +34,22 @@ const ProductCard = ({ title, created_by, cover_image, rating, comment }) => {
       )}
     </div>
   );
+};
+
+ProductCard.defaultProps = {
+  title: 'untitle',
+  created_by: 'unknown',
+  cover_image: '',
+  rating: 0,
+  comment: ''
+};
+
+ProductCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  created_by: PropTypes.string.isRequired,
+  cover_image: PropTypes.string.isRequired,
+  rating: PropTypes.number,
+  comment: PropTypes.string
 };
 
 export default ProductCard;

@@ -1,6 +1,7 @@
 import React, { useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 import { cardAction } from '../actions';
+import PropTypes from 'prop-types';
 import { getDataAPI } from '../api';
 import ProductCard from '../components/card/ProductCard';
 import ReviewCard from '../components/card/ReviewCard';
@@ -30,6 +31,15 @@ const CardContainer = ({ getCardData, cardItems }) => {
         })}
     </>
   );
+};
+
+CardContainer.defaultProps = {
+  cardItems: []
+};
+
+CardContainer.propTypes = {
+  getCardData: PropTypes.func.isRequired,
+  cardItems: PropTypes.array.isRequired
 };
 
 const mapStateToProps = (state) => ({

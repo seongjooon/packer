@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { requestAction } from '../actions';
 import { getDataAPI } from '../api';
 import InputForm from '../components/input/InputForm';
@@ -50,6 +51,15 @@ const InputFormContainer = ({ getRequestData, requestItems }) => {
         })}
     </>
   );
+};
+
+InputFormContainer.defaultProps = {
+  requestItems: []
+};
+
+InputFormContainer.propTypes = {
+  getRequestData: PropTypes.func.isRequired,
+  requestItems: PropTypes.array.isRequired
 };
 
 const mapStateToProps = (state) => ({

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './InputForm.scss';
 import { getByteSize } from '../../utils';
 
@@ -41,6 +42,21 @@ const InputForm = ({ type, defaultComment, text, onChange, totalByte }) => {
       </button>
     </div>
   );
+};
+
+InputForm.defaultProps = {
+  type: 'input',
+  defaultComment: '',
+  text: '',
+  totalByte: 0
+};
+
+InputForm.propTypes = {
+  type: PropTypes.string.isRequired,
+  defaultComment: PropTypes.string,
+  text: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  totalByte: PropTypes.number.isRequired
 };
 
 export default InputForm;
