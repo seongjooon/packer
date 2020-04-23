@@ -3,11 +3,11 @@ import './ReviewCard.scss';
 import Rating from 'react-rating';
 import { TiStarOutline, TiStarFullOutline } from 'react-icons/ti';
 
-const ReviewCard = ({ title, created_by, coverImage, rating, comment }) => {
+const ReviewCard = ({ title, created_by, cover_image, rating, comment }) => {
   return (
     <div className="ui_card--side">
       <div className="ui_card__imgcover">
-        <img className="ui_card__img" src={coverImage} alt="cover" />
+        <img className="ui_card__img" src={cover_image} alt="cover" />
       </div>
       <div className="ui_card__txtarea">
         <div className="ui_card__info">

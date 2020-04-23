@@ -19,29 +19,11 @@ const CardContainer = ({ getCardData, cardItems }) => {
     <>
       {cardItems.length !== 0 &&
         cardItems.map((item, index) => {
-          const { type, title, created_by, image, rating, comment } = item;
+          const { type } = item;
           if (type === 'product') {
-            return (
-              <ProductCard
-                key={index}
-                title={title}
-                created_by={created_by}
-                coverImage={image}
-                rating={rating}
-                comment={comment}
-              />
-            );
+            return <ProductCard key={index} {...item} />;
           } else if (type === 'review') {
-            return (
-              <ReviewCard
-                key={index}
-                title={title}
-                created_by={created_by}
-                coverImage={image}
-                rating={rating}
-                comment={comment}
-              />
-            );
+            return <ReviewCard key={index} {...item} />;
           } else {
             return null;
           }
