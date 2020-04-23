@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard <ProductCard /> matches snapshot 1`] = `
+<div
+  className="ui_card"
+>
+  <div
+    className="ui_card__imgcover"
+  >
+    <t
+      afterLoad={[Function]}
+      alt="cover"
+      beforeLoad={[Function]}
+      className="ui_card__img"
+      delayMethod="throttle"
+      delayTime={300}
+      effect="blur"
+      placeholderSrc={null}
+      src=""
+      threshold={100}
+      useIntersectionObserver={true}
+      visibleByDefault={false}
+      wrapperClassName=""
+    />
+  </div>
+  <div
+    className="ui_card__info"
+  >
+    <span
+      className="ui_card__label"
+    >
+      Card Label
+    </span>
+    <span
+      className="ui_card__title"
+    >
+      Card Title
+    </span>
+    <div
+      className="ui_card__foot"
+    >
+      <span
+        className="ui_card__hilight"
+      >
+        Hilight
+      </span>
+      <span
+        className="ui_card__cross-out"
+      >
+        Cross out
+      </span>
+    </div>
+  </div>
+  0
+</div>
+`;

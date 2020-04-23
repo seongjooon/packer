@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewCard <ReviewCard /> matches snapshot 1`] = `
+<div
+  className="ui_card--side"
+>
+  <div
+    className="ui_card__imgcover"
+  >
+    <t
+      afterLoad={[Function]}
+      alt="cover"
+      beforeLoad={[Function]}
+      className="ui_card__img"
+      delayMethod="throttle"
+      delayTime={300}
+      effect="blur"
+      placeholderSrc={null}
+      src="목걸이"
+      threshold={100}
+      useIntersectionObserver={true}
+      visibleByDefault={false}
+      wrapperClassName=""
+    />
+  </div>
+  <div
+    className="ui_card__txtarea"
+  >
+    <div
+      className="ui_card__info"
+    >
+      <span
+        className="ui_card__title"
+      >
+        상품 후기
+      </span>
+      <span
+        className="ui_card__comment"
+      >
+        목걸이가 반짝거리고 고급스럽게 이뻐요~
+      </span>
+    </div>
+    <div
+      className="ui_card__rating"
+    >
+      <div
+        className="ui_rating_wrapper"
+      >
+        <RatingAPILayer
+          className="ui_rating"
+          direction="ltr"
+          emptySymbol={
+            <TiStarOutline
+              size="20px"
+            />
+          }
+          fractions={1}
+          fullSymbol={
+            <TiStarFullOutline
+              size="20px"
+            />
+          }
+          initialRating={3}
+          onChange={[Function]}
+          onClick={[Function]}
+          onHover={[Function]}
+          placeholderSymbol={
+            Object {
+              "backgroundColor": "red",
+              "border": "5px double white",
+              "borderRadius": "50%",
+              "display": "inline-block",
+              "height": 30,
+              "width": 30,
+            }
+          }
+          quiet={false}
+          readonly={true}
+          start={0}
+          step={1}
+          stop={5}
+        />
+        <span
+          className="ui_card__reviewer"
+        >
+           | 
+          John Doe
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

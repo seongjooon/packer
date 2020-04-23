@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ReviewCard from '../components/card/ReviewCard';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 describe('ReviewCard', () => {
   describe('<ReviewCard />', () => {
@@ -17,10 +19,19 @@ describe('ReviewCard', () => {
       wrapper = shallow(<ReviewCard {...props} />);
     });
 
+    it('matches snapshot', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
+
     it('should contain elements', () => {
       expect(
         wrapper.contains(
-          <img className="ui_card__img" src="목걸이" alt="cover" />
+          <LazyLoadImage
+            effect="blur"
+            className="ui_card__img"
+            src="목걸이"
+            alt="cover"
+          />
         )
       ).toBe(true);
       expect(

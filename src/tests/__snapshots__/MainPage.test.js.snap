@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main Pgae <MainPage /> matches snapshot 1`] = `
+<div
+  className="Main-Page"
+>
+  <Link
+    to="/card"
+  >
+    Card
+  </Link>
+  <Link
+    to="/input"
+  >
+    Input
+  </Link>
+</div>
+`;

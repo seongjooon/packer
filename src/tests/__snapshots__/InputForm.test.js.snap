@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputForm <InputForm /> matches snapshot 1`] = `
+<div
+  className="ui_input_form"
+>
+  <div
+    className="ui_input_form__textarea "
+  >
+    <textarea
+      className="ui__textarea input"
+      maxLength="500"
+      name="content_text"
+      onChange={[MockFunction]}
+      placeholder="주문 요청사항을 입력해주세요"
+      readOnly={false}
+      value="항상 건강하시고 행복하세요. 그리고 주문시 요청사항 꼭 적어주세요:)"
+    />
+    <em
+      className="ui_textarea__chars"
+    >
+      434
+    </em>
+  </div>
+  <button
+    className="ui_textarea__btn "
+    type="submit"
+  >
+    Save
+  </button>
+</div>
+`;

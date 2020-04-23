@@ -18,6 +18,10 @@ describe('InputForm', () => {
       wrapper = shallow(<InputForm {...props} />);
     });
 
+    it('matches snapshot', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
+
     it('should contain elements', () => {
       expect(wrapper.find('textarea').length).toBe(1);
       expect(wrapper.find('button').length).toBe(1);

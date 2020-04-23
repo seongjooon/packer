@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ProductCard from '../components/card/ProductCard';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 describe('ProductCard', () => {
   describe('<ProductCard />', () => {
@@ -15,9 +17,20 @@ describe('ProductCard', () => {
       wrapper = shallow(<ProductCard {...props} />);
     });
 
+    it('matches snapshot', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
+
     it('should contain elements (1)', () => {
       expect(
-        wrapper.contains(<img className="ui_card__img" src="" alt="cover" />)
+        wrapper.contains(
+          <LazyLoadImage
+            effect="blur"
+            className="ui_card__img"
+            src=""
+            alt="cover"
+          />
+        )
       ).toBe(true);
       expect(
         wrapper.contains(<span className="ui_card__label">Card Label</span>)
@@ -38,7 +51,14 @@ describe('ProductCard', () => {
       };
       wrapper = shallow(<ProductCard {...props} />);
       expect(
-        wrapper.contains(<img className="ui_card__img" src="IMG" alt="cover" />)
+        wrapper.contains(
+          <LazyLoadImage
+            effect="blur"
+            className="ui_card__img"
+            src="IMG"
+            alt="cover"
+          />
+        )
       ).toBe(true);
       expect(
         wrapper.contains(<span className="ui_card__label">Label</span>)
@@ -62,7 +82,12 @@ describe('ProductCard', () => {
       wrapper = shallow(<ProductCard {...props} />);
       expect(
         wrapper.contains(
-          <img className="ui_card__img" src="mountain" alt="cover" />
+          <LazyLoadImage
+            effect="blur"
+            className="ui_card__img"
+            src="mountain"
+            alt="cover"
+          />
         )
       ).toBe(true);
       expect(

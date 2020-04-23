@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import { MemoryRouter } from 'react-router-dom';
 
@@ -19,6 +19,10 @@ describe('<App />', () => {
     beforeEach(() => {
       mockStore = configureMockStore();
       mockState = { getDataReducer };
+    });
+
+    it('matches snapshot', () => {
+      expect(shallow(<App />)).toMatchSnapshot();
     });
 
     it('/ redirect to /main', () => {
