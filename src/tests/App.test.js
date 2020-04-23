@@ -15,10 +15,12 @@ describe('<App />', () => {
   describe('should be render according to the route', () => {
     let mockStore;
     let mockState;
+
     beforeEach(() => {
       mockStore = configureMockStore();
       mockState = { getDataReducer };
     });
+
     it('/ redirect to /main', () => {
       const wrapper = mount(
         <MemoryRouter initialEntries={['/']}>
@@ -30,6 +32,7 @@ describe('<App />', () => {
       expect(wrapper.find(CardPage)).toHaveLength(0);
       expect(wrapper.find(InputFormPage)).toHaveLength(0);
     });
+
     it('/card', () => {
       let store = mockStore(mockState);
       const wrapper = mount(
@@ -44,6 +47,7 @@ describe('<App />', () => {
       expect(wrapper.find(CardPage)).toHaveLength(1);
       expect(wrapper.find(InputFormPage)).toHaveLength(0);
     });
+
     it('/input', () => {
       let store = mockStore(mockState);
       const wrapper = mount(

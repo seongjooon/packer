@@ -38,7 +38,7 @@ const InputForm = ({ type, defaultComment, text, onChange, totalByte }) => {
             : ''
         }`}
       >
-        저장
+        Save
       </button>
     </div>
   );
