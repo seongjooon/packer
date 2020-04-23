@@ -3,12 +3,19 @@ import PropTypes from 'prop-types';
 import './ReviewCard.scss';
 import Rating from 'react-rating';
 import { TiStarOutline, TiStarFullOutline } from 'react-icons/ti';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ReviewCard = ({ title, created_by, cover_image, rating, comment }) => {
   return (
     <div className="ui_card--side">
       <div className="ui_card__imgcover">
-        <img className="ui_card__img" src={cover_image} alt="cover" />
+        <LazyLoadImage
+          effect="blur"
+          className="ui_card__img"
+          src={cover_image}
+          alt="cover"
+        />
       </div>
       <div className="ui_card__txtarea">
         <div className="ui_card__info">

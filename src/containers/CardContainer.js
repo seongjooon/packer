@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { cardAction } from '../actions';
 import PropTypes from 'prop-types';
 import { getDataAPI } from '../api';
+import Loading from '../components/common/Loading';
 import ProductCard from '../components/card/ProductCard';
 import ReviewCard from '../components/card/ReviewCard';
 
@@ -15,6 +16,8 @@ const CardContainer = ({ getCardData, cardItems }) => {
   useEffect(() => {
     getData();
   }, [getData]);
+
+  if (cardItems.length === 0) return <Loading />;
 
   return (
     <>

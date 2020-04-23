@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { requestAction } from '../actions';
 import { getDataAPI } from '../api';
+import Loading from '../components/common/Loading';
 import InputForm from '../components/input/InputForm';
 import { getByteSize } from '../utils';
 
@@ -32,6 +33,8 @@ const InputFormContainer = ({ getRequestData, requestItems }) => {
       }
     }
   };
+
+  if (requestItems.length === 0) return <Loading />;
 
   return (
     <>
