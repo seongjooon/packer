@@ -1,5 +1,5 @@
 .Header {
-  max-width: 60%;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -12,6 +12,7 @@
     display: flex;
     cursor: pointer;
     padding: 1px 2px;
+    width: 132px;
   }
   a {
     text-decoration: none;

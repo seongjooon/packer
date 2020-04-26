@@ -1,19 +1,53 @@
-// $mediaPcWidth: 1025px;
-// $mediatabletWidth: 768px;
-// // $mediaMobileWidth: 414px;
+$mediaPcWidth: 1025px;
+$mediaTabletWidth: 768px;
 
-// @media (min-width: #{$mediatabletWidth}) {
-//   html * {
-//     background-color: blue;
-//   }
-// }
-// @media (min-width: #{$mediaPcWidth}) {
-//   html * {
-//     background-color: red;
-//   }
-// }
+@media (min-width: #{$mediaTabletWidth}) {
+  html * {
+    .Header {
+      max-width: 80%;
+      li {
+        font-size: 1.5rem;
+      }
+    }
+    .Main-Page {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-55%, -45%);
+      padding-top: 0%;
+      a {
+        padding: 15% 30%;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media (min-width: #{$mediaPcWidth}) {
+  html * {
+    .Header {
+      max-width: 60%;
+      li {
+        font-size: 1.2rem;
+      }
+    }
+    .Main-Page {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-35%, -45%);
+      padding-top: 0%;
+      a {
+        margin: 2%;
+        padding: 10% 10%;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
 
 html * {
+  width: 100%;
   font-family: 'Nanum Gothic', sans-serif !important;
 }
 
