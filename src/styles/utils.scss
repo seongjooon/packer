@@ -1,22 +1,21 @@
+// $mediaPcWidth: 1025px;
+// $mediatabletWidth: 768px;
+// // $mediaMobileWidth: 414px;
+
+// @media (min-width: #{$mediatabletWidth}) {
+//   html * {
+//     background-color: blue;
+//   }
+// }
+// @media (min-width: #{$mediaPcWidth}) {
+//   html * {
+//     background-color: red;
+//   }
+// }
+
 html * {
   font-family: 'Nanum Gothic', sans-serif !important;
 }
-
-$gray1: #d9d9d9;
-$gray2: hsla(0, 0%, 86.3%, 0.3);
-$gray3: #999;
-$gray4: #333;
-$gray5: #acacac;
-$gray6: #666;
-$gray7: #f8f9fb;
-$gray8: #b4b4b4;
-$gray9: rgb(82, 82, 82);
-$gray10: #eeeeee;
-$idusRedYello: #dc5850;
-$gold: #ffc801;
-$transparentGray: rgba(0, 0, 0, 0.041);
-$transparentRed: #dc57509a;
-$idusGreenBlue: #22a7af;
 
 @mixin cardForm {
   vertical-align: top;
@@ -42,3 +41,19 @@ $idusGreenBlue: #22a7af;
   justify-content: center;
   align-items: flex-start;
 }
+
+$gray1: #d9d9d9;
+$gray2: hsla(0, 0%, 86.3%, 0.3);
+$gray3: #999;
+$gray4: #333;
+$gray5: #acacac;
+$gray6: #666;
+$gray7: #f8f9fb;
+$gray8: #b4b4b4;
+$gray9: rgb(82, 82, 82);
+$gray10: #eeeeee;
+$idusRedYello: #dc5850;
+$gold: #ffc801;
+$transparentGray: rgba(0, 0, 0, 0.041);
+$transparentRed: #dc57509a;
+$idusGreenBlue: #22a7af;
