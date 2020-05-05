@@ -25,7 +25,7 @@
 ```
 $git clone https://github.com/MrKamake/idus.git
 
-$cd class101-test
+$cd idus
 
 $yarn install
 
